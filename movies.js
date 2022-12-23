@@ -3,7 +3,8 @@ const input = document.querySelector("input")
 
 
 //Test avec touche Enter//
-input.addEventListener('keyup', (e) => {   
+$("input").keyup(function (e) { 
+//input.addEventListener('keyup', (e) => {   
  if (event.keyCode === 13){ 
   const title = input.value
 
@@ -16,8 +17,8 @@ input.addEventListener('keyup', (e) => {
 }
 })
 
-
-button.addEventListener('click', (e) => {
+$("button").click(function (e) { 
+//button.addEventListener('click', (e) => {
   const title = input.value
 
   fetch(`http://www.omdbapi.com/?s=${title}&apikey=f6e256e1`)
